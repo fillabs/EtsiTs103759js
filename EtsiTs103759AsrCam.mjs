@@ -1,6 +1,6 @@
 ﻿import { Time64, TwoDLocation, Psid } from 'Ieee1609Dot2js';
-import { Uint8, Sequence, Null, OpenType } from 'asnjs';
-import { MbSingleObservation, V2xPduStream } from 'EtsiTs103759BaseTypes';
+import { Uint8, Sequence, Null, OpenType, SequenceOf, BitString } from 'asnjs';
+import { MbSingleObservation, V2xPduStream } from './EtsiTs103759BaseTypes.mjs';
 
 const c_CamTgt_BeaconCommon    = 0;
 const c_CamTgt_StaticCommon    = 1;

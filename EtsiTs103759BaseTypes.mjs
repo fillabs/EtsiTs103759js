@@ -1,5 +1,5 @@
 ﻿import { Uint8, Sequence, SequenceOf, Null, OpenType, OctetString } from 'asnjs';
-import { Ieee1609Dot2Data, Certificate } from 'Ieee1609Dot2js';
+import { Ieee1609Dot2Data, Ieee1609Dot2Certificate } from 'Ieee1609Dot2js';
 
 export const MbSingleObservation = function (set, variant) {
 	return Sequence([ 
@@ -17,7 +17,7 @@ export class V2xPduStream extends Sequence([
 	    c_ObsPdu_etsiGn: OctetString(),
 	    c_ObsPdu_ieee1609Dot2Data: Ieee1609Dot2Data
 	}, 'IdObsPdu' ))},
-	{ name: 'certificate', type: Certificate, optional:true },
+	{ name: 'certificate', type: Ieee1609Dot2Certificate, optional:true },
 	{ name: 'subjectPduIndex', type: Uint8 },
 	{ extension:true }
 ]){}
