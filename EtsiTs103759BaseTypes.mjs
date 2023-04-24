@@ -16,7 +16,8 @@ export class V2xPduStream extends Sequence([
 	{ name: 'v2xPdus', type: SequenceOf(OpenType({
 	    c_ObsPdu_etsiGn: OctetString(),
 	    c_ObsPdu_ieee1609Dot2Data: Ieee1609Dot2Data
-	}, 'IdObsPdu' ))},
+	    }, 'IdObsPdu' ))
+	},
 	{ name: 'certificate', type: Ieee1609Dot2Certificate, optional:true },
 	{ name: 'subjectPduIndex', type: Uint8 },
 	{ extension:true }
